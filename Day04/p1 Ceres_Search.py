@@ -1,5 +1,5 @@
 # Read file data
-f = open ('Day04/input_test.txt','r')
+f = open ('Day04/input.txt','r')
 wsearch = f.read().split()
 f.close()
 
