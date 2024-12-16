@@ -4,4 +4,3 @@ arcade = f.read().strip().split("\n\n")
 f.close()
 
 # TO DO
-
