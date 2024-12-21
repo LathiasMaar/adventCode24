@@ -1,3 +1,6 @@
+# Note: this code it's a brute force solution, it's more efficient to calculate the values
+# for b-count directly from the ecuations.Then obtain the a-count.
+
 # Read file data
 f = open ('Day13/input.txt','r')
 arcade = f.read().strip().split("\n\n")
@@ -15,7 +18,7 @@ for block in arcade:
     
     clawMachines.append([buttonA, buttonB, prize])
 
-# 
+
 for machine in clawMachines:
 
     stepAx = machine[0][0]
@@ -54,14 +57,9 @@ for machine in clawMachines:
             if (cntA * stepAx + cntB * stepBx == objX):
                 solution.append((cntA, cntB))
 
-    minTokens = 400000
+    count = 0
     for sol in solution:
-        token = sol[0]*3 + sol[1]
-        if token < minTokens:
-            minTokens = token
-    
-    if minTokens != 400000:
-        count += minTokens
+        count += sol[0]*3 + sol[1]
 
 print(count)
 
